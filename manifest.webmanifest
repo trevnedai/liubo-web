@@ -1,0 +1,18 @@
+{
+  "name": "Liubo: Ancient Strategy Game",
+  "short_name": "Liubo",
+  "description": "The lost board game of Han dynasty China. Throw the sticks, race your pieces, raise an owl and catch the fish.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0705",
+  "theme_color": "#0b0705",
+  "categories": ["games", "board"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
