@@ -1,5 +1,22 @@
 [
   {
+    "commit": "428e4ab",
+    "version": "1.1.0",
+    "at": "2026-11-25T22:52:31.296Z",
+    "assets": [
+      "assets/BoardClassic-C5gt05OO.js",
+      "assets/BoardIsland-hCspKGHR.js",
+      "assets/game-Crsu0qEs.js",
+      "assets/game-F-K48u_b.css",
+      "assets/index-EvYhVrhQ.js",
+      "assets/lang-D-Oax-G3.js",
+      "assets/owl.worker-DEv4m2hG.js",
+      "assets/react-BFPXi17q.js",
+      "assets/react-three-fiber.esm-r4kULonP.js",
+      "assets/riddles-CUiajQPm.js"
+    ]
+  },
+  {
     "commit": "e1bc00e",
     "version": "1.1.0",
     "at": "2026-11-25T14:47:42.340Z",
@@ -26,21 +43,6 @@
       "assets/game-B6VoAgsR.js",
       "assets/game-BafY4LHN.css",
       "assets/index-CDjH04Vp.js",
-      "assets/lang-D-Oax-G3.js",
-      "assets/owl.worker-DEv4m2hG.js",
-      "assets/react-BFPXi17q.js",
-      "assets/react-three-fiber.esm-r4kULonP.js",
-      "assets/riddles-CUiajQPm.js"
-    ]
-  },
-  {
-    "commit": "earlier",
-    "assets": [
-      "assets/BoardClassic-Cch3B9rW.js",
-      "assets/BoardIsland-CGmOt6kf.js",
-      "assets/game-BLPS_ZQH.css",
-      "assets/game-BmRF2VNS.js",
-      "assets/index-Bg9uGUEf.js",
       "assets/lang-D-Oax-G3.js",
       "assets/owl.worker-DEv4m2hG.js",
       "assets/react-BFPXi17q.js",
