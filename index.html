@@ -31,13 +31,51 @@
     <meta property="og:image" content="https://liubo.dcegno.com/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A Liubo game on a lacquer table lit by an oil lamp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <script type="module" crossorigin src="./assets/index-Dqjkjm1n.js"></script>
+
+    <!-- The menu's picture is fetched at once, together with the game's code. -->
+    <link rel="preload" as="image" href="./art/classic/hero.jpg" />
+
+    <!-- What the page is, for search engines (read as data, never run). -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Liubo: Ancient Strategy Game",
+        "url": "https://liubo.dcegno.com/",
+        "image": "https://liubo.dcegno.com/og.jpg",
+        "description": "Liubo, the lost board game of Han dynasty China, reconstructed. Throw six bamboo sticks, race your pieces around a lacquer board, raise an owl and catch the fish.",
+        "genre": ["Board game", "Strategy game"],
+        "gamePlatform": ["Web browser", "iOS"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "playMode": ["SinglePlayer", "MultiPlayer"],
+        "inLanguage": ["en", "it", "es", "fr", "de", "pt", "ru", "tr", "ja", "ko", "zh-Hans", "zh-Hant"],
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "publisher": { "@type": "Organization", "name": "Dcegno", "url": "https://dcegno.com" },
+        "sameAs": ["https://apps.apple.com/app/id6832985025", "https://dcegno.com/liubo"]
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/index-Bg9uGUEf.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/game-BmRF2VNS.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-BFPXi17q.js">
+    <link rel="modulepreload" crossorigin href="./assets/lang-D-Oax-G3.js">
+    <link rel="preload" as="style" crossorigin href="./assets/game-BLPS_ZQH.css">
   </head>
   <body style="background:#0b0705">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Shown from the first moment, while the game's code arrives; the game replaces it when it starts. -->
+      <div role="status" aria-label="Liubo" style="position:fixed;inset:0;display:grid;place-items:center;background:radial-gradient(110% 80% at 50% 0%,#3a2416,#150d09 55%,#070504)">
+        <div style="text-align:center">
+          <div style="font:600 2.1rem/1 'Cormorant Garamond','Iowan Old Style',Palatino,'Songti SC',Georgia,serif;letter-spacing:0.34em;padding-left:0.34em;color:#e2bd62">LIUBO</div>
+          <div style="margin-top:0.7rem;font:1.35rem/1 'Songti SC','Noto Serif CJK SC',STSong,serif;letter-spacing:0.3em;padding-left:0.3em;color:#c23a26">六博</div>
+        </div>
+      </div>
+    </div>
     <noscript>
-      <p style="color:#e9d9b0;font-family:system-ui,sans-serif;text-align:center;padding:2rem">Liubo needs JavaScript to run. Please switch it on in your browser and load the page again.</p>
+      <p style="position:fixed;left:0;right:0;bottom:2rem;color:#e9d9b0;font-family:system-ui,sans-serif;text-align:center;padding:0 2rem">Liubo needs JavaScript to run. Please switch it on in your browser and load the page again.</p>
     </noscript>
   </body>
 </html>
