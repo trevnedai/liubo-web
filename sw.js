@@ -12,8 +12,8 @@
  *
  * To switch it off for everyone: publish a sw.js that only unregisters itself (see docs/WEB_APP.md).
  */
-const CACHE = 'liubo-1.1.0-mww0w5o1'
-const FILES = ["./","assets/BoardClassic-Cch3B9rW.js","assets/game-BLPS_ZQH.css","assets/game-BmRF2VNS.js","assets/index-Bg9uGUEf.js","assets/lang-D-Oax-G3.js","assets/owl.worker-DEv4m2hG.js","assets/react-BFPXi17q.js","assets/react-three-fiber.esm-r4kULonP.js","assets/riddles-CUiajQPm.js"]
+const CACHE = 'liubo-1.1.0-mww3ldek'
+const FILES = ["./","assets/BoardClassic-BcRxELSe.js","assets/game-B6VoAgsR.js","assets/game-BafY4LHN.css","assets/index-CDjH04Vp.js","assets/lang-D-Oax-G3.js","assets/owl.worker-DEv4m2hG.js","assets/react-BFPXi17q.js","assets/react-three-fiber.esm-r4kULonP.js","assets/riddles-CUiajQPm.js"]
 
 self.addEventListener('install', (event) => {
   self.skipWaiting()
@@ -39,15 +39,17 @@ const keep = async (request, response) => {
   return response
 }
 
-/** The page: fresh from the network; the kept copy only when there is no connection. */
+/**
+ * The page: fresh from the network, so a new version arrives at once. The kept copy is used when there is no
+ * connection, when the server answers with an error, or when the connection is so slow that nothing has come after
+ * four seconds (a phone holding on to one bar of signal would otherwise show a blank page for a long time).
+ */
 const page = async (request) => {
-  try {
-    return await keep(request, await fetch(request))
-  } catch (error) {
-    const kept = (await caches.match(request, { ignoreSearch: true })) || (await caches.match('./'))
-    if (kept) return kept
-    throw error
-  }
+  const kept = (await caches.match(request, { ignoreSearch: true })) || (await caches.match('./'))
+  const fresh = fetch(request).then((response) => (response.ok || !kept ? keep(request, response) : kept))
+  if (!kept) return fresh
+  const slow = new Promise((resolve) => setTimeout(() => resolve(kept), 4000))
+  return Promise.race([fresh, slow]).catch(() => kept)
 }
 
 /** The game's code: fingerprinted file names never change, so a kept copy is always right. */
