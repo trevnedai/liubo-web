@@ -12,8 +12,8 @@
  *
  * To switch it off for everyone: publish a sw.js that only unregisters itself (see docs/WEB_APP.md).
  */
-const CACHE = 'liubo-1.1.0-mww3ldek'
-const FILES = ["./","assets/BoardClassic-BcRxELSe.js","assets/game-B6VoAgsR.js","assets/game-BafY4LHN.css","assets/index-CDjH04Vp.js","assets/lang-D-Oax-G3.js","assets/owl.worker-DEv4m2hG.js","assets/react-BFPXi17q.js","assets/react-three-fiber.esm-r4kULonP.js","assets/riddles-CUiajQPm.js"]
+const CACHE = 'liubo-1.1.0-mww8mqwe'
+const FILES = ["./","assets/BoardClassic-125PcQ1o.js","assets/game-DRNF7u9o.js","assets/game-F-K48u_b.css","assets/index-C2cB7Dt6.js","assets/lang-D-Oax-G3.js","assets/owl.worker-DEv4m2hG.js","assets/react-BFPXi17q.js","assets/react-three-fiber.esm-r4kULonP.js","assets/riddles-CUiajQPm.js"]
 
 self.addEventListener('install', (event) => {
   self.skipWaiting()

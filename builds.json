@@ -1,5 +1,22 @@
 [
   {
+    "commit": "e1bc00e",
+    "version": "1.1.0",
+    "at": "2026-11-25T14:47:42.340Z",
+    "assets": [
+      "assets/BoardClassic-125PcQ1o.js",
+      "assets/BoardIsland-D249nztH.js",
+      "assets/game-DRNF7u9o.js",
+      "assets/game-F-K48u_b.css",
+      "assets/index-C2cB7Dt6.js",
+      "assets/lang-D-Oax-G3.js",
+      "assets/owl.worker-DEv4m2hG.js",
+      "assets/react-BFPXi17q.js",
+      "assets/react-three-fiber.esm-r4kULonP.js",
+      "assets/riddles-CUiajQPm.js"
+    ]
+  },
+  {
     "commit": "63056d9",
     "version": "1.1.0",
     "at": "2026-11-25T12:26:40.255Z",
